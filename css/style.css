@@ -1,0 +1,107 @@
+.layarPerfContainer {
+  position: fixed;
+  z-index: 1000000;
+  width: 100%;
+  top: 0;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  background-color: #eee;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 8px #999;
+  font-family: arial,sans-serif;
+  color: black;
+  transition: 500ms;
+  user-select: none;
+  line-height: 14px;
+}
+
+
+.layarPerfContainer.layarContinerHide {
+  top: -20px;
+  transition: 500ms
+}
+.layarChild:last-child {
+  margin-right: 0;
+}
+
+.layarChild {
+  margin-right: 8px;
+  padding: 3px;
+}
+
+.layerTitle {
+  font-weight: bold;
+}
+
+.layarHideButton {
+  transform: rotate(0deg);
+  height: 15px;
+  width: 15px;
+  margin-bottom: 0;
+  transition: 500ms;
+}
+
+.layarHideButton.layarHideActive {
+  transform: rotate(180deg);
+  transition: 500ms;
+  height: 15px;
+  width: 15px;
+  margin-top: 3px;
+
+}
+
+
+
+.layarButtonContainer{
+  height: 15px;
+  width: 15px;
+  box-shadow: #999 0px 6px 8px;
+  background: #eee;
+  position: absolute;
+  margin-top: 14px;
+  border-radius: 2px;
+}
+
+.layarGreenStat {
+  color :#39aa56;
+}
+.layarRedStat {
+  color: #db4545;
+}
+.layarYellowStat {
+  color: #fa9f47;
+}
+.layarPerfContainer.layarGreenStat{
+  box-shadow: #39aa56 0 4px 8px;
+  color: black;
+}
+
+.layarPerfContainer.layarRedStat{
+  box-shadow: #d9534f 0 4px 8px;
+  color: black;
+}
+.layarPerfContainer.layarYellowStat{
+  box-shadow: #fa9f47 0 4px 8px;
+  color: black;
+}
+
+.layarGreenStat .layarButtonContainer {
+  box-shadow: #39aa56 0 4px 8px;
+  color: black;
+}
+.layarRedStat .layarButtonContainer {
+  box-shadow: #d9534f 0 4px 8px;
+  color: black;
+}
+.layarYellowStat .layarButtonContainer {
+  box-shadow: #fa9f47 0 4px 8px;
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .layarPerfContainer {
+    font-size: 10px;
+  }
+}

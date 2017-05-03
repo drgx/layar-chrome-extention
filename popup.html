@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+    <title>Layar Web Performance Budget</title>
+    <style>
+
+        .first {
+            display: block;
+            width: 170px;
+        }
+
+        body {
+            background: #454f4f;
+            color: white;
+            padding: 5px;
+        }
+
+        input {
+            width: 50px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .logo {
+            flex: 1;
+        }
+
+        .title {
+            flex: 4;
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .footer {
+            display: flex;
+            margin: 4px;
+        }
+        .msg {
+            flex: 3;
+            padding: 7px 0;
+            line-height: 24px
+        }
+        .save {
+            flex: 1;
+            align-self: flex-end;
+        }
+        .save button{
+            display: block;
+            font-weight: 500;
+            font-size: 14px;
+            padding: 8px 16px 10px 16px;
+            margin-left: auto;
+            cursor: pointer;
+            font-family: 'Roboto', Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+            border: none;
+            color: #fff;
+            background-color: #46b980;
+            box-shadow: 0 2px 4px 0 rgba(0,0,0,0.50);
+            border-radius: 2px;
+            width: 115px;
+        }
+
+    </style>
+
+
+</head>
+<body>
+<div class="header">
+    <div class="logo">
+        <img src="svg/layar-white.svg" width="45px"/>
+    </div>
+    <div class="title"> Layar Performance Budget</div>
+</div>
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th>Lower threshold</th>
+        <th>Upper threshold</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>
+            <span class="first">DOMContentLoaded (ms)</span>
+        </td>
+            <td><input type="text" id="dcl_lower"/></td>
+            <td><input type="text" id="dcl_upper"/></td>
+    </tr>
+    <tr>
+        <td>
+            <span class="first">Speed Index (ms)</span>
+        </td>
+            <td><input type="text" id="speed_index_lower"/></td>
+            <td><input type="text" id="speed_index_upper"/></td>
+    </tr>
+    <tr>
+        <td>
+            <span class="first">TTFB / Time to first byte (ms)</span>
+        </td>
+            <td><input type="text" id="ttfb_lower"/></td>
+            <td><input type="text" id="ttfb_upper"/></td>
+    </tr>
+    </tbody>
+</table>
+<div class="footer">
+    <div class="msg">
+
+    </div>
+    <div class="save">
+        <button id="saveConfig">Save</button>
+    </div>
+</div>
+<script src="javascripts/browser-action.js"></script>
+</body>
+</html>
+
